@@ -6,7 +6,11 @@ const questions = [{
         message: "What is your username on GitHub?",
         name: 'username'
     },
-
+    {
+        type: 'input',
+        message: "What is your preferred contact email?",
+        name: 'email'
+    },
     {
         type: 'input',
         message: "What is the title of your project?",
@@ -33,7 +37,7 @@ const questions = [{
 
     {
         type: 'input',
-        message: "Please credit any collaborators if any.",
+        message: "Please credit any collaborators if any, or write 'sole author'.",
         name: 'credits'
     },
 
@@ -49,11 +53,43 @@ const questions = [{
 function init() {
     inquirer.prompt(questions).then((answers) => {
         console.log(JSON.stringify(answers, null, '  '));
+
+        const readme = `
+# Project Title 
+## ${answers.title}
+
+## Table of Contents
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Collaborators](#credits)
+- [Feedback](#feedback)
+
+## Project Description 
+${answers.description}
+
+## Installation 
+${answers.install}
+
+## Usage 
+${answers.usage}
+
+## Collaborators
+${answers.credits}
+
+## License
+This project is licensed under ${answers.license}
+
+## Feedback
+For all inquiries about this project, please contact me on Github - @[${answers.username}](https://github.com/${answers.username}) - or you can email me at ${answers.email}.
+`
+
+        fs.writeFile('generated/README.md', readme, (err) =>
+            err ? console.error(err) : console.log('Hooray')
+        );
     });
 }
 
-///fs.writeFile('dummy.txt', process.argv[?????], (err) =>
-///    err ? console.error(err) : console.log('Success!')
-///);
 
 init();
