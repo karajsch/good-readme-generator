@@ -1,6 +1,6 @@
 
 # Project Title 
-## Good README Generator
+## Beautiful World Coding Project
 
 ## Table of Contents
 - [Description](#project-description)
@@ -11,13 +11,13 @@
 - [Feedback](#feedback)
 
 ## Project Description 
-The Good README Generator is the perfect solution for someone who doesn't want to deal with the hassle of constantly creating README documents from scratch. The Generator takes the busy work out, allowing the user to simply run the application, enter the applicable information, and have the README generated immediately exactly where it should be.
+Here is where a good description would go.
 
 ## Installation 
-Download/unpack or clone the repo and then run 'npm install' using a CLI.
+Download/unpack or clone the repo and then run 'npm install' using a CLI
 
 ## Usage 
-Follow the prompts after running the application with the CLI command 'node index.js'.
+Follow the prompts after running the application with the CLI command 'node index.js'
 
 ## Collaborators
 sole author

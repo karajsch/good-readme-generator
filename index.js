@@ -59,11 +59,11 @@ function init() {
 ## ${answers.title}
 
 ## Table of Contents
-- [Description](#description)
+- [Description](#project-description)
 - [Installation](#installation)
 - [Usage](#usage)
 - [License](#license)
-- [Collaborators](#credits)
+- [Collaborators](#collaborators)
 - [Feedback](#feedback)
 
 ## Project Description 
@@ -79,14 +79,15 @@ ${answers.usage}
 ${answers.credits}
 
 ## License
-This project is licensed under ${answers.license}
+This project is licensed under ${answers.license}. Not sure what that means? Please check out [choosealicense.com/licenses/](https://choosealicense.com/licenses/) for more information.
+
 
 ## Feedback
 For all inquiries about this project, please contact me on Github - @[${answers.username}](https://github.com/${answers.username}) - or you can email me at ${answers.email}.
 `
 
-        fs.writeFile('generated/README.md', readme, (err) =>
-            err ? console.error(err) : console.log('Hooray')
+        fs.writeFile('README.md', readme, (err) =>
+            err ? console.error(err) : console.log('All right! Generating your new README.md...')
         );
     });
 }
