@@ -2,6 +2,8 @@
 # Project Title 
 ## Good README Generator
 
+[![Watch the video](video.png)](https://vimeo.com/492664777)
+
 ## Table of Contents
 - [Description](#project-description)
 - [Installation](#installation)
